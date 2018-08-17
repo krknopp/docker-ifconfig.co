@@ -15,4 +15,4 @@ EXPOSE 8080
 
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["ipd", "--reverse-lookup", "--template=/etc/ipd/index.html"]
+CMD ["ipd", "--reverse-lookup", "--template=/etc/ipd/index.html", "--trusted-header=X-Forwarded-For"]
